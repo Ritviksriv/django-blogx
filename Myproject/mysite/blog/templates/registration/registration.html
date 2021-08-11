@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block right_panel %}
+{% endblock %}
+{% block content %}
+    <div class="card bg-light mb-1">
+      <div class="card-body">
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+        <a href="{% url 'login' %}">Click here to login</a>
+      {% else %}
+        <h1>Register Here</h1>
+        <h4>Just fill out the form.</h4>
+        <br></br>
+        <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          <input type="submit" class='btn btn-primary' name="" value="Register">
+        </form>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock %}

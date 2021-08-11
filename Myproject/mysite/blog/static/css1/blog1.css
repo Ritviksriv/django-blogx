@@ -1,0 +1,59 @@
+.techfont{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.postdate{
+  text-align: center;
+}
+
+.posttitle{
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent{
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+}
+
+.centerstage{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-comment{
+  position: absolute;
+  right: 0px;
+}
+
+.bigbrand{
+  font-size: 1.5em;
+  color: white;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+.zoom:hover {
+  transform: scale(1.1);
+}
+#welcome{
+  color:orange;
+}
+.changeit{
+  color:white;
+}
+.card{
+    box-shadow: 0 16px 48px #E3E7EB;
+}
+.side{
+    margin-right: 187px;
+}
+.btn-danger{
+    background: orange !important;
+    border-color: orange !important;
+}

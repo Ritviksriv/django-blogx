@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block right_panel %}
+{% endblock %}
+
+{% block content %}
+  <div class="card bg-light mb-1">
+    <div class="card-body">
+    <h1>Please Login: </h1>
+    <br></br>
+    {% if form.errors %}
+        <p>Your username and password didn't match.Please try again!</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+        {{form.as_p}}
+
+        <input type="submit" class='btn btn-primary' value="Login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+    <p></p>
+    <p>Not registered? <a href="{% url 'register' %}"> Click here!</a></p>
+  </div>
+</div>
+{% endblock %}
